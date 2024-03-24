@@ -22,6 +22,10 @@ body {
   width: 60%;
 }
 
+.weather-app-form-input::placeholder {
+  opacity: 0.5;
+}
+
 .weather-app-form-button {
   border: none;
   border-radius: 6px;
