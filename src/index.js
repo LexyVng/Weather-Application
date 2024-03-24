@@ -2,14 +2,19 @@ function updateWeatherData(response) {
   let cityElement = document.querySelector("#current-city");
   let countryElement = document.querySelector("#current-country");
   let temperatureElement = document.querySelector("#current-temp-value");
+  let descriptionElement = document.querySelector("#current-condition");
 
   let temperature = response.data.temperature.current;
   let country = response.data.country;
   let newCity = response.data.city;
+  let condition = response.data.condition.description;
 
   cityElement.innerHTML = newCity;
   countryElement.innerHTML = `, ${country}`;
   temperatureElement.innerHTML = Math.round(temperature);
+  descriptionElement.innerHTML = condition;
+
+  console.log(response.data);
 }
 
 function searchCity(city) {
