@@ -15,20 +15,22 @@
   <body>
     <div class="weather-app">
       <header>
-        <form class="weather-app-form">
+        <form class="weather-app-form" id="weather-app-form">
           <input
             type="text"
             placeholder="Enter a city..."
             required
             class="weather-app-form-input"
+            id="weather-app-form-input"
           />
           <input type="submit" value="GO" class="weather-app-form-button" />
         </form>
       </header>
       <main>
         <h1>
-          Right now in <span class="current-city">London, UK</span>, it is
-          cloudy.
+          Right now in
+          <span class="current-city" id="current-city">London</span
+          ><span class="current-country">,UK</span>, it is cloudy.
         </h1>
         <div class="weather-details">
           <div class="current-temp-emoji">☁️</div>
@@ -54,5 +56,6 @@
         <a href="https://weatherfcapp.netlify.app/" target="_blank">Netlify</a>.
       </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>

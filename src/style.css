@@ -56,7 +56,8 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.current-city {
+.current-city,
+.current-country {
   color: #685454;
   font-weight: bold;
 }
