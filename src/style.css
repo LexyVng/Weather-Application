@@ -88,8 +88,13 @@ h1 {
   margin-right: 7px;
 }
 
+.humidity-percentage,
+.wind-value {
+  color: #631357;
+}
+
 a {
-  color: #685454;
+  color: #631357;
   font-weight: 400;
 }
 
