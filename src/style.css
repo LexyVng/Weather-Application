@@ -25,7 +25,8 @@ body {
 }
 
 .weather-app-form-input::placeholder {
-  opacity: 0.5;
+  opacity: 0.4;
+  color: #631357;
 }
 
 .weather-app-form-button {
@@ -69,23 +70,22 @@ h1 {
 }
 
 .weather-emoji {
-  margin-bottom: 10px;
-  margin-left: 100px;
-  padding-left: 40px;
+  margin-left: 120px;
 }
 
 .city-temperature {
   color: #685454;
   display: flex;
-  margin-left: 60px;
+  margin-left: 59px;
   margin-top: 10px;
 }
 
 .current-data {
   line-height: 30px;
-  margin-top: 0;
   margin-right: 80px;
-  padding-right: 30px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-right: 20px;
 }
 
 .current-data-humidity {
@@ -106,6 +106,6 @@ footer {
   color: #ea8a8a;
   font-size: 14px;
   font-weight: 300;
-  padding-top: 30px;
+  margin-top: 40px;
   text-align: center;
 }
