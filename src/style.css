@@ -5,6 +5,8 @@ body {
 .weather-app {
   background: #f8fcfb;
   border-radius: 18px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   color: #ea8a8a;
   max-width: 700px;
   margin: 30px auto;
