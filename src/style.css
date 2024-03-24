@@ -1,5 +1,6 @@
 body {
   background: #f2f2f2;
+  font-family: "Roboto", sans-serif;
 }
 .weather-app {
   background: #f8fcfb;
@@ -77,12 +78,17 @@ h1 {
   padding-right: 30px;
 }
 
+.current-data-humidity {
+  margin-right: 7px;
+}
+
 a {
   color: #685454;
 }
 
 footer {
   color: #ea8a8a;
+  font-size: 14px;
   padding-top: 30px;
   text-align: center;
 }
