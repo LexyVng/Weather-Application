@@ -6,7 +6,7 @@ body {
   background: #f8fcfb;
   border-radius: 18px;
   color: #ea8a8a;
-  max-width: max-content;
+  max-width: 700px;
   margin: 30px auto;
   padding: 30px 20px;
 }
@@ -52,7 +52,6 @@ h1 {
 .weather-details {
   margin-top: 40px;
   display: grid;
-  text-align: center;
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -62,18 +61,20 @@ h1 {
   font-weight: bold;
 }
 
-.current-temp-value,
-.current-temp-emoji {
+.current-temp-emoji,
+.city-temperature {
   font-size: 70px;
 }
 
-.current-temp-value {
-  color: #685454;
+.current-temp-emoji {
+  margin-left: 100px;
+  padding-left: 30px;
 }
 
-.current-temp-emoji {
-  margin-left: 80px;
-  padding-left: 30px;
+.city-temperature {
+  color: #685454;
+  display: flex;
+  margin-left: 57px;
 }
 
 .current-data {
