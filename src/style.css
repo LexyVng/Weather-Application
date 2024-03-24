@@ -46,7 +46,7 @@ h1 {
 }
 
 h1 {
-  font-weight: lighter;
+  font-weight: 200;
 }
 
 .weather-details {
@@ -88,11 +88,13 @@ h1 {
 
 a {
   color: #685454;
+  font-weight: 400;
 }
 
 footer {
   color: #ea8a8a;
   font-size: 14px;
+  font-weight: 300;
   padding-top: 30px;
   text-align: center;
 }
