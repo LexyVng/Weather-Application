@@ -65,7 +65,37 @@ function handleSearchSubmit(event) {
   searchCity(inputElement.value);
 }
 
+function updateForecast() {
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      ` <div class="row">
+            <div class="col-2">
+              <div class="forecast-date">${day}</div>
+              <div class="forecast-picture">
+                <img
+                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png"
+                  alt=""
+                  width="40"
+                />
+              </div>
+              <div class="forecast-temperatures">
+                <span class="forecast-temp-max">18°</span>
+                <span class="forecast-temp-min">12°</span>
+              </div>
+            </div>
+          </div>`;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let formElement = document.querySelector("#weather-app-form");
 formElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Athens");
+
+updateForecast();
