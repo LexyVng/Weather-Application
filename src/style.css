@@ -102,6 +102,21 @@ a {
   font-weight: 400;
 }
 
+.weather-forecast {
+  margin-top: 20px;
+  margin-left: 30px;
+  max-width: fit-content;
+  text-align: center;
+}
+
+.forecast-temp-max {
+  color: #631357;
+}
+
+.forecast-temp-min {
+  opacity: 0.7;
+}
+
 footer {
   color: #ea8a8a;
   font-size: 14px;
