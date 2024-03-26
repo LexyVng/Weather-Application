@@ -72,31 +72,39 @@ function getForecast(city) {
   axios.get(apiUrl).then(updateForecast);
 }
 
-function updateForecast(response) {
-  console.log(response.data);
-
+function formatDay(timestamp) {
+  let day = new Date(timestamp * 1000);
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  return days[day.getDay()];
+}
+
+function updateForecast(response) {
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      ` <div class="row">
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        ` <div class="row">
             <div class="col-2">
-              <div class="forecast-date">${day}</div>
-              <div class="forecast-picture">
+              <div class="forecast-date">${formatDay(day.time)}</div>
                 <img
-                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png"
+                  src="${day.condition.icon_url}"
                   alt=""
-                  width="40"
+                  width="60"
+                  class="forecast-picture"
                 />
-              </div>
               <div class="forecast-temperatures">
-                <span class="forecast-temp-max">18°</span> /
-                <span class="forecast-temp-min">12°</span>
+                <span class="forecast-temp-max">${Math.round(
+                  day.temperature.maximum
+                )}°</span> /
+                <span class="forecast-temp-min">${Math.round(
+                  day.temperature.minimum
+                )}°</span>
               </div>
             </div>
           </div>`;
+    }
   });
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
