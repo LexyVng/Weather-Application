@@ -25,7 +25,7 @@ function updateWeatherData(response) {
   windSpeedElement.innerHTML = `${windSpeed}km/h`;
   dayTimeElement.innerHTML = formatDate(date);
 
-  console.log(response.data);
+  getForecast(newCity);
 }
 
 function formatDate(date) {
@@ -65,7 +65,16 @@ function handleSearchSubmit(event) {
   searchCity(inputElement.value);
 }
 
-function updateForecast() {
+function getForecast(city) {
+  let apiKey = "2b4a0533t1055afa3fbo41efac5059ad";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(updateForecast);
+}
+
+function updateForecast(response) {
+  console.log(response.data);
+
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   let forecastHtml = "";
 
@@ -83,7 +92,7 @@ function updateForecast() {
                 />
               </div>
               <div class="forecast-temperatures">
-                <span class="forecast-temp-max">18°</span>
+                <span class="forecast-temp-max">18°</span> /
                 <span class="forecast-temp-min">12°</span>
               </div>
             </div>
