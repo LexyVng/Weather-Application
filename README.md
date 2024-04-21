@@ -18,3 +18,9 @@ This weather app is built using the following technologies:
 - CSS
 - JavaScript
 - AJAX API with Axios
+
+## Acknowledgements
+Thank you to SheCodes for providing the API.
+
+## License
+This project is licensed under the MIT License.
